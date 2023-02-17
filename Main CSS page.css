@@ -29,8 +29,45 @@
     background-color: red;
     color: white;
   }
+
   home-container{
-   
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px 5px;
+      grid-template-areas:
+          
+  }
+
+  about-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px 5px;
+      grid-template-areas:
+          
+  }
+
+  menu-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px 5px;
+      grid-template-areas:
+          
+  }
+
+  contact-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px 5px;
+      grid-template-areas:
+          
+  }
+
+  map-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px 5px;
+      grid-template-areas:
+          
   }
 
 
