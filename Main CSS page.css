@@ -1,11 +1,22 @@
 
+/*Import Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: #949191
+}
+
+
+
+
+
 /* Add a black background color to the top navigation */
 nav {
     background-color: #333;
     overflow: hidden;
     grid-area: nav;
-    padding-top: 20px;
   }
   
   /* Style the links inside the navigation bar */
@@ -31,30 +42,117 @@ nav {
     color: white;
   }
 
-  home-container{
-      display: grid;
-      grid-template-columns: 5fr 5fr;
-      grid-gap: 5px 5px;
-      grid-template-areas: 
-        "header   header"
-        "nav      nav"      
+  footer{
+    grid-area: footer;
+    border: 3px solid black;
   }
 
-  home-header{
+  header{
     grid-area: header;
     text-align: center;
-
+    padding-bottom: 10px;
+    font-size: 30px;
   }
 
+
+
+
+
+/*Home Page Container and Formatting*/
+  home-container{
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-gap: 10px 10px;
+      grid-template-areas: 
+        "header   header   header"
+        "nav      nav      nav" 
+        "lbar     main     rbar"
+        "lbar     main     rbar" 
+        "lbox     main     rbox"
+        "footer   footer   footer"
+
+  }
+  home-main{
+    grid-area: main;
+    border: 3px solid black;
+  }
+
+  home-lbar{
+    grid-area: lbar;
+    border: 3px solid black;
+  }
+
+  home-rbar{
+    grid-area: rbar;
+    border: 3px solid black;
+  }
+  home-lbox{
+    grid-area: lbox;
+    border: 3px solid black;
+  }
+
+  home-rbox{
+    grid-area: rbox;
+    border: 3px solid black;
+  }
+/* End of home page style sheet */
+
+
+/*About Page Style Sheet*/
   about-container{
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
-        "header   header"
-        "nav      nav"  
+        "header   header  header  header  header"
+        "nav  nav nav nav nav"  
+        "title  title title title title"
+        "main main  main  main  main"
+        "pic1 pic2  pic3  pic4  pic5"
+        "script1  script2 script3 script4 script5"
   }
+about-title{
+  grid-area: title;
+}
+about-main{
+  grid-area: main;
+}
+pic1{
+  grid-area: pic1;
+}
+pic2{
+  grid-area: pic2;
+}
+pic3{
+  grid-area: pic3;
+}
+pic4{
+  grid-area: pic4;
+}
+pic5{
+  grid-area: pic5;
+}
+script1{
+  grid-area: script1;
+}
+script2{
+  grid-area: script2;
+}
+script3{
+  grid-area: script3;
+}
+script4{
+  grid-area: script4;
+}
+script5{
+  grid-area: script5;
+}
 
+
+
+
+
+  
   menu-container{
       display: grid;
       grid-template-columns: 1fr 1fr;
