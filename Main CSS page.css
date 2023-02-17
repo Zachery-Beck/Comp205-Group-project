@@ -298,6 +298,7 @@ menu-bbar{
       grid-template-areas: 
       "header"
       "nav"         
+      "title"
   }
 
 
