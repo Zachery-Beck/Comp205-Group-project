@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
-  background-color: #949191
+  background-color: #ffffff
 }
 
 
@@ -14,7 +14,7 @@ body {
 
 /* Add a black background color to the top navigation */
 nav {
-    background-color: #333;
+    background-color: #717171;
     overflow: hidden;
     grid-area: nav;
   }
@@ -42,6 +42,7 @@ nav {
     color: white;
   }
 
+  /*permenant header and footer*/
   footer{
     grid-area: footer;
     border: 3px solid black;
@@ -53,6 +54,10 @@ nav {
     padding-bottom: 10px;
     font-size: 30px;
   }
+
+
+
+
 
 
 
@@ -98,6 +103,14 @@ nav {
 /* End of home page style sheet */
 
 
+
+
+
+
+
+
+
+
 /*About Page Style Sheet*/
   about-container{
       display: grid;
@@ -110,57 +123,139 @@ nav {
         "main main  main  main  main"
         "pic1 pic2  pic3  pic4  pic5"
         "script1  script2 script3 script4 script5"
+        "footer footer  footer footer footer"
   }
 about-title{
   grid-area: title;
+  border: 3px solid black;
 }
 about-main{
   grid-area: main;
+  border: 3px solid black;
 }
 pic1{
   grid-area: pic1;
+  border: 3px solid black;
 }
 pic2{
   grid-area: pic2;
+  border: 3px solid black;
 }
 pic3{
   grid-area: pic3;
+  border: 3px solid black;
 }
 pic4{
   grid-area: pic4;
+  border: 3px solid black;
 }
 pic5{
   grid-area: pic5;
+  border: 3px solid black;
 }
 script1{
   grid-area: script1;
+  border: 3px solid black;
 }
 script2{
   grid-area: script2;
+  border: 3px solid black;
 }
 script3{
   grid-area: script3;
+  border: 3px solid black;
 }
 script4{
   grid-area: script4;
+  border: 3px solid black;
 }
 script5{
   grid-area: script5;
+  border: 3px solid black;
+}
+/* End of About page style sheet */
+
+
+
+
+
+
+
+
+
+ /* Start of Menu page style sheet*/ 
+  menu-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5px 5px;
+      grid-template-areas: 
+      "header   header  header"
+      "nav  nav nav"  
+      "title title title"
+      "stitle1  stitle2 stitle3"  
+      "lbar mbar  rbar"
+      "lbox mbox  rbox"
+      "stitle4  stitle4 stitle4"
+      "bbar bbar bbar"      
+      "footer footer  footer"
+  }
+menu-title{
+  grid-area: title;
+  text-align: center;
+  text-decoration: underline;
+}
+lbar-subtitle{
+  grid-area: stitle1;
+  text-align: center;
+}
+mbar-subtitle{
+  grid-area: stitle2;
+  text-align: center;
+}
+rbar-subtitle{
+  grid-area: stitle3;
+  text-align: center;
+}
+bbar-subtitle{
+  grid-area: stitle4;
+  text-align: center;
+}
+menu-lbar{
+  grid-area: lbar;
+  text-align: center;
+  border: 3px solid black;
+}
+menu-mbar{
+  grid-area: mbar;
+  text-align: center;
+  border: 3px solid black;
+}
+menu-rbar{
+  grid-area: rbar;
+  text-align: center;
+  border: 3px solid black;
+}
+menu-lbox{
+  grid-area: lbox;
+  text-align: center;
+}
+menu-mbox{
+  grid-area: mbox;
+  text-align: center;
+}
+menu-rbox{
+  grid-area: rbox;
+  text-align: center;
+}
+
+menu-bbar{
+  grid-area: bbar;
+  text-align: center;
+  border: 3px solid black;
 }
 
 
 
-
-
-  
-  menu-container{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 5px 5px;
-      grid-template-areas: 
-      "header   header"
-      "nav      nav"          
-  }
 
   contact-container{
       display: grid;
