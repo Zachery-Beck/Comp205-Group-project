@@ -207,18 +207,22 @@ menu-title{
 lbar-subtitle{
   grid-area: stitle1;
   text-align: center;
+  border: 3px solid black;
 }
 mbar-subtitle{
   grid-area: stitle2;
   text-align: center;
+  border: 3px solid black;
 }
 rbar-subtitle{
   grid-area: stitle3;
   text-align: center;
+  border: 3px solid black;
 }
 bbar-subtitle{
   grid-area: stitle4;
   text-align: center;
+  border: 3px solid black;
 }
 menu-lbar{
   grid-area: lbar;
@@ -238,14 +242,17 @@ menu-rbar{
 menu-lbox{
   grid-area: lbox;
   text-align: center;
+  border: 3px solid black;
 }
 menu-mbox{
   grid-area: mbox;
   text-align: center;
+  border: 3px solid black;
 }
 menu-rbox{
   grid-area: rbox;
   text-align: center;
+  border: 3px solid black;
 }
 
 menu-bbar{
@@ -259,20 +266,38 @@ menu-bbar{
 
   contact-container{
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 3fr 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
       "header   header"
-      "nav      nav"          
+      "nav      nav"
+      "title    title"
+      "main     rbar"
+      "footer   footer"          
+  }
+  contact-title{
+    grid-area: title;
+  }
+  contact-main{
+    grid-area: main;
+    border: 3px solid black;
+  }
+  contact-rbar{
+    grid-area: rbar;
+    border: 3px solid black;
   }
 
+
+
+
+  
   map-container{
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
-      "header   header"
-      "nav      nav"         
+      "header"
+      "nav"         
   }
 
 
