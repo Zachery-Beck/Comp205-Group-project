@@ -305,12 +305,15 @@ menu-bbar{
   }
   map-title{
     grid-area: title;
+    border: 3px solid black;
   }
   map-main{
     grid-area: main;
+    border: 3px solid black;
   }
   map-bbar{
     grid-area: bbar;
+    border: 3px solid black;
   }
 
 
