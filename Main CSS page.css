@@ -300,8 +300,17 @@ menu-bbar{
       "nav"         
       "title"
       "main"
-      "bbox"
+      "bbar"
       "footer"
+  }
+  map-title{
+    grid-area: title;
+  }
+  map-main{
+    grid-area: main;
+  }
+  map-bbar{
+    grid-area: bbar;
   }
 
 
