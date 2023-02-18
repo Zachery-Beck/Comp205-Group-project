@@ -45,7 +45,8 @@ nav {
   /*permenant header and footer*/
   footer{
     grid-area: footer;
-    border: 3px solid black;
+    background-color: #717171;
+    height: 35pt;
   }
 
   header{
@@ -263,7 +264,7 @@ menu-bbar{
 
 
 
-
+/*Start of the Contact container*/
   contact-container{
       display: grid;
       grid-template-columns: 3fr 1fr;
@@ -290,7 +291,7 @@ menu-bbar{
 
 
 
-  
+  /*Start of the map container*/
   map-container{
       display: grid;
       grid-template-columns: 1fr;
