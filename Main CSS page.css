@@ -43,19 +43,25 @@ nav {
   }
 
   /*permenant header and footer*/
-  footer{
+  .footer-main{
     grid-area: footer;
     background-color: #717171;
     height: 35pt;
   }
 
-  header{
+  .header-main{
     grid-area: header;
     text-align: center;
     padding-bottom: 10px;
     font-size: 30px;
   }
 
+  /* section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px 5px;
+
+  } */
 
 
 
@@ -68,7 +74,7 @@ nav {
   .home-container{
       display: grid;
       grid-template-columns: 1fr 3fr 1fr;
-      grid-gap: 10px 10px;
+      grid-gap: 5px 5px;
       grid-template-areas: 
         "header   header   header"
         "nav      nav      nav" 
@@ -78,26 +84,26 @@ nav {
         "footer   footer   footer"
 
   }
-  home-main{
+  .home-main{
     grid-area: main;
     border: 3px solid black;
   }
 
-  home-lbar{
+  .home-lbar{
     grid-area: lbar;
     border: 3px solid black;
   }
 
-  home-rbar{
+  .home-rbar{
     grid-area: rbar;
     border: 3px solid black;
   }
-  home-lbox{
+  .home-lbox{
     grid-area: lbox;
     border: 3px solid black;
   }
 
-  home-rbox{
+  .home-rbox{
     grid-area: rbox;
     border: 3px solid black;
   }
@@ -113,7 +119,7 @@ nav {
 
 
 /*About Page Style Sheet*/
-  about-container{
+  .about-container{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 5px 5px;
@@ -126,51 +132,51 @@ nav {
         "script1  script2 script3 script4 script5"
         "footer footer  footer footer footer"
   }
-about-title{
+.about-title{
   grid-area: title;
   border: 3px solid black;
 }
-about-main{
+.about-main{
   grid-area: main;
   border: 3px solid black;
 }
-pic1{
+.pic1{
   grid-area: pic1;
   border: 3px solid black;
 }
-pic2{
+.pic2{
   grid-area: pic2;
   border: 3px solid black;
 }
-pic3{
+.pic3{
   grid-area: pic3;
   border: 3px solid black;
 }
-pic4{
+.pic4{
   grid-area: pic4;
   border: 3px solid black;
 }
-pic5{
+.pic5{
   grid-area: pic5;
   border: 3px solid black;
 }
-script1{
+.script1{
   grid-area: script1;
   border: 3px solid black;
 }
-script2{
+.script2{
   grid-area: script2;
   border: 3px solid black;
 }
-script3{
+.script3{
   grid-area: script3;
   border: 3px solid black;
 }
-script4{
+.script4{
   grid-area: script4;
   border: 3px solid black;
 }
-script5{
+.script5{
   grid-area: script5;
   border: 3px solid black;
 }
@@ -185,7 +191,7 @@ script5{
 
 
  /* Start of Menu page style sheet*/ 
-  menu-container{
+  .menu-container{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 5px 5px;
@@ -200,63 +206,63 @@ script5{
       "bbar bbar bbar"      
       "footer footer  footer"
   }
-menu-title{
+.menu-title{
   grid-area: title;
   text-align: center;
   text-decoration: underline;
 }
-lbar-subtitle{
+.lbar-subtitle{
   grid-area: stitle1;
   text-align: center;
   border: 3px solid black;
 }
-mbar-subtitle{
+.mbar-subtitle{
   grid-area: stitle2;
   text-align: center;
   border: 3px solid black;
 }
-rbar-subtitle{
+.rbar-subtitle{
   grid-area: stitle3;
   text-align: center;
   border: 3px solid black;
 }
-bbar-subtitle{
+.bbar-subtitle{
   grid-area: stitle4;
   text-align: center;
   border: 3px solid black;
 }
-menu-lbar{
+.menu-lbar{
   grid-area: lbar;
   text-align: center;
   border: 3px solid black;
 }
-menu-mbar{
+.menu-mbar{
   grid-area: mbar;
   text-align: center;
   border: 3px solid black;
 }
-menu-rbar{
+.menu-rbar{
   grid-area: rbar;
   text-align: center;
   border: 3px solid black;
 }
-menu-lbox{
+.menu-lbox{
   grid-area: lbox;
   text-align: center;
   border: 3px solid black;
 }
-menu-mbox{
+.menu-mbox{
   grid-area: mbox;
   text-align: center;
   border: 3px solid black;
 }
-menu-rbox{
+.menu-rbox{
   grid-area: rbox;
   text-align: center;
   border: 3px solid black;
 }
 
-menu-bbar{
+.menu-bbar{
   grid-area: bbar;
   text-align: center;
   border: 3px solid black;
@@ -265,7 +271,7 @@ menu-bbar{
 
 
 /*Start of the Contact container*/
-  contact-container{
+  .contact-container{
       display: grid;
       grid-template-columns: 3fr 1fr;
       grid-gap: 5px 5px;
@@ -276,14 +282,14 @@ menu-bbar{
       "main     rbar"
       "footer   footer"          
   }
-  contact-title{
+  .contact-title{
     grid-area: title;
   }
-  contact-main{
+  .contact-main{
     grid-area: main;
     border: 3px solid black;
   }
-  contact-rbar{
+  .contact-rbar{
     grid-area: rbar;
     border: 3px solid black;
   }
@@ -292,7 +298,7 @@ menu-bbar{
 
 
   /*Start of the map container*/
-  map-container{
+  .map-container{
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 5px 5px;
@@ -304,15 +310,15 @@ menu-bbar{
       "bbar"
       "footer"
   }
-  map-title{
+  .map-title{
     grid-area: title;
     border: 3px solid black;
   }
-  map-main{
+  .map-main{
     grid-area: main;
     border: 3px solid black;
   }
-  map-bbar{
+  .map-bbar{
     grid-area: bbar;
     border: 3px solid black;
   }
