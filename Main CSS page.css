@@ -8,7 +8,9 @@ body {
   background-color: #ffffff
 }
 
-
+ul{
+  list-style: none;
+}
 
 
 
@@ -90,7 +92,9 @@ nav {
     border: 3px solid black;
     
   }
-
+  .home_paragraph{
+    background-image: url(PizzaBigBackground.jpg);
+  }
   .home-lbar{
     grid-area: lbar;
     border: 3px solid black;
@@ -133,6 +137,11 @@ nav {
   }
 .about-title{
   grid-area: title;
+  padding-bottom: 1%;
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .about-main{
   grid-area: main;
@@ -199,32 +208,47 @@ nav {
       "lbar mbar  rbar"
       "lbox mbox  rbox"
       "stitle4  stitle4 stitle4"
-      "bbar bbar bbar"      
+      "bbar1 bbar2 bbar3"      
   }
 .menu-title{
   grid-area: title;
+  padding-bottom: 1%;
   text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
   text-decoration: underline;
 }
 .lbar-subtitle{
   grid-area: stitle1;
   text-align: center;
   border: 3px solid black;
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .mbar-subtitle{
   grid-area: stitle2;
   text-align: center;
   border: 3px solid black;
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .rbar-subtitle{
   grid-area: stitle3;
   text-align: center;
   border: 3px solid black;
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .bbar-subtitle{
   grid-area: stitle4;
   text-align: center;
   border: 3px solid black;
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .menu-lbar{
   grid-area: lbar;
@@ -257,11 +281,22 @@ nav {
   border: 3px solid black;
 }
 
-.menu-bbar{
-  grid-area: bbar;
+.menu-bbar1{
+  grid-area: bbar1;
   text-align: center;
   border: 3px solid black;
 }
+.menu-bbar2{
+  grid-area: bbar2;
+  text-align: center;
+  border: 3px solid black;
+}
+.menu-bbar3{
+  grid-area: bbar3;
+  text-align: center;
+  border: 3px solid black;
+}
+
 
 
 
@@ -279,6 +314,11 @@ nav {
   }
   .contact-title{
     grid-area: title;
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    text-decoration: underline;
   }
   .contact-main{
     grid-area: main;
@@ -306,15 +346,20 @@ nav {
   }
   .map-title{
     grid-area: title;
-    border: 3px solid black;
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    text-decoration: underline;
   }
   .map-main{
     grid-area: main;
-    border: 3px solid black;
   }
   .map-bbar{
     grid-area: bbar;
-    border: 3px solid black;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
   }
 
 
