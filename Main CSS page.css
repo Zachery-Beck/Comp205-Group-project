@@ -56,12 +56,16 @@ nav {
     font-size: 30px;
   }
 
-  /* section{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 5px 5px;
-
-  } */
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px 5px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "main"
+  "footer"
+}
 
 
 
@@ -76,12 +80,9 @@ nav {
       grid-template-columns: 1fr 3fr 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
-        "header   header   header"
-        "nav      nav      nav" 
-        "lbar     main     rbar"
-        "lbar     main     rbar" 
-        "lbox     main     rbox"
-        "footer   footer   footer"
+      "lbar     main     rbar"
+      "lbar     main     rbar" 
+      "lbox     main     rbox"
 
   }
   .home-main{
@@ -124,17 +125,13 @@ nav {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
-        "header   header  header  header  header"
-        "nav  nav nav nav nav"  
         "title  title title title title"
         "main main  main  main  main"
         "pic1 pic2  pic3  pic4  pic5"
-        "script1  script2 script3 script4 script5"
-        "footer footer  footer footer footer"
+        "script1  script2 script3 script4 script5"    
   }
 .about-title{
   grid-area: title;
-  border: 3px solid black;
 }
 .about-main{
   grid-area: main;
@@ -196,15 +193,12 @@ nav {
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
-      "header   header  header"
-      "nav  nav nav"  
       "title title title"
       "stitle1  stitle2 stitle3"  
       "lbar mbar  rbar"
       "lbox mbox  rbox"
       "stitle4  stitle4 stitle4"
       "bbar bbar bbar"      
-      "footer footer  footer"
   }
 .menu-title{
   grid-area: title;
@@ -270,17 +264,17 @@ nav {
 
 
 
+
+
+
 /*Start of the Contact container*/
   .contact-container{
       display: grid;
       grid-template-columns: 3fr 1fr;
       grid-gap: 5px 5px;
       grid-template-areas: 
-      "header   header"
-      "nav      nav"
       "title    title"
-      "main     rbar"
-      "footer   footer"          
+      "main     rbar"         
   }
   .contact-title{
     grid-area: title;
@@ -297,18 +291,17 @@ nav {
 
 
 
+  
+
   /*Start of the map container*/
   .map-container{
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 5px 5px;
-      grid-template-areas: 
-      "header"
-      "nav"         
+      grid-template-areas:       
       "title"
       "main"
       "bbar"
-      "footer"
   }
   .map-title{
     grid-area: title;
