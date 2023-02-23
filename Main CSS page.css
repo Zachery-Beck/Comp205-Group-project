@@ -48,7 +48,11 @@ nav {
   .footer-main{
     grid-area: footer;
     background-color: #717171;
-    height: 35pt;
+    height: auto;
+    text-align: center;
+    font-style: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
   }
 
   .header-main{
@@ -89,8 +93,12 @@ nav {
   }
 
   .home-main{
+    margin-top: 2%;
     grid-area: main;
-    
+    font-size: 25px;
+    text-align: center;
+    line-height: 2;
+    background-image: url('https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/eauclaire/Johnny-s-Pizza-Shop2-d930d3e25056a36_d930d4f1-5056-a36a-068ca787d55dd265.jpg');
   }
   .home-lbar{
     grid-area: lbar;
@@ -98,10 +106,12 @@ nav {
 
   .home-rbar{
     grid-area: rbar;
+
   }
   .home-lbox{
     grid-area: lbox;
     padding-left: 10%;
+    padding-top: 16%;
   }
 
   .home-rbox{
@@ -109,6 +119,24 @@ nav {
   }
   .home-hours{
     text-align: center;
+    font-size: 12pt;
+  }
+  .home-specials{
+    text-align: center;
+    font-size: 12pt;
+  }
+  .spec_title{
+    font-size: 20pt;
+    text-decoration: underline;
+  }
+  .Hours-Title{
+    font-size: 20pt;
+    text-decoration: underline;
+  }
+  .home-main-text{
+    background-color: red;
+    color: white;
+    margin-top: 10%;
   }
 /* End of home page style sheet */
 
@@ -139,50 +167,82 @@ nav {
   font-size: 20pt;
   font-weight: bold;
   text-decoration: underline;
+  margin-top: 2%;
+}
+.about-text{
+  font-size: 22px;
+  text-align: center;
+
 }
 .about-main{
   grid-area: main;
-  border: 3px solid black;
 }
 .pic1{
   grid-area: pic1;
-  border: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 .pic2{
   grid-area: pic2;
-  border: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
 }
 .pic3{
   grid-area: pic3;
-  border: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
 }
 .pic4{
   grid-area: pic4;
-  border: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  
 }
 .pic5{
   grid-area: pic5;
-  border: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+
 }
 .script1{
   grid-area: script1;
-  border: 3px solid black;
+  text-align: center;
+  font-size: 20px;
 }
 .script2{
   grid-area: script2;
-  border: 3px solid black;
+  text-align: center;
+  font-size: 20px;
 }
 .script3{
   grid-area: script3;
-  border: 3px solid black;
+  text-align: center;
+  font-size: 20px;
 }
 .script4{
   grid-area: script4;
-  border: 3px solid black;
+  text-align: center;
+  font-size: 20px
 }
 .script5{
   grid-area: script5;
-  border: 3px solid black;
+  text-align: center;
+  font-size: 20px;
 }
 /* End of About page style sheet */
 
@@ -214,6 +274,7 @@ nav {
   font-size: 20pt;
   font-weight: bold;
   text-decoration: underline;
+  margin-top: 2%;
 }
 .lbar-subtitle{
   grid-area: stitle1;
