@@ -87,31 +87,28 @@ nav {
       "lbox     main     rbox"
 
   }
+
   .home-main{
     grid-area: main;
-    border: 3px solid black;
     
-  }
-  .home_paragraph{
-    background-image: url(PizzaBigBackground.jpg);
   }
   .home-lbar{
     grid-area: lbar;
-    border: 3px solid black;
   }
 
   .home-rbar{
     grid-area: rbar;
-    border: 3px solid black;
   }
   .home-lbox{
     grid-area: lbox;
-    border: 3px solid black;
+    padding-left: 10%;
   }
 
   .home-rbox{
     grid-area: rbox;
-    border: 3px solid black;
+  }
+  .home-hours{
+    text-align: center;
   }
 /* End of home page style sheet */
 
@@ -221,7 +218,6 @@ nav {
 .lbar-subtitle{
   grid-area: stitle1;
   text-align: center;
-  border: 3px solid black;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
@@ -229,7 +225,6 @@ nav {
 .mbar-subtitle{
   grid-area: stitle2;
   text-align: center;
-  border: 3px solid black;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
@@ -237,7 +232,6 @@ nav {
 .rbar-subtitle{
   grid-area: stitle3;
   text-align: center;
-  border: 3px solid black;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
