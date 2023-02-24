@@ -1,7 +1,7 @@
 
 /*Import Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Phudu&display=swap'); 
 
 body {
   font-family: 'Montserrat Alternates', sans-serif;
@@ -91,7 +91,7 @@ nav {
       "lbox     main     rbox"
 
   }
-
+/* Main text */
   .home-main{
     margin-top: 2%;
     grid-area: main;
@@ -100,23 +100,27 @@ nav {
     line-height: 2;
     background-image: url('https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/eauclaire/Johnny-s-Pizza-Shop2-d930d3e25056a36_d930d4f1-5056-a36a-068ca787d55dd265.jpg');
   }
+  /* hours */
   .home-lbar{
     grid-area: lbar;
+    
   }
-
+/* specials */
   .home-rbar{
     grid-area: rbar;
-
+    
   }
+  /* Pizza Photo */
   .home-lbox{
     grid-area: lbox;
     padding-left: 10%;
     padding-top: 16%;
   }
-
+/* Fries Photo */
   .home-rbox{
     grid-area: rbox;
   }
+  
   .home-hours{
     text-align: center;
     font-size: 12pt;
@@ -125,13 +129,15 @@ nav {
     text-align: center;
     font-size: 12pt;
   }
-  .spec_title{
+  .spec-title{
     font-size: 20pt;
     text-decoration: underline;
+    background-color: #b6b4b4;
   }
   .Hours-Title{
     font-size: 20pt;
     text-decoration: underline;
+    background-color: #b6b4b4;
   }
   .home-main-text{
     background-color: red;
@@ -168,15 +174,20 @@ nav {
   font-weight: bold;
   text-decoration: underline;
   margin-top: 2%;
+  background-color: #b6b4b4;
 }
 .about-text{
   font-size: 22px;
   text-align: center;
+  margin-left: 3%;
+  margin-right: 3%
 
 }
 .about-main{
   grid-area: main;
+  background-color: #b6b4b4;
 }
+/* pictures in about us */
 .pic1{
   grid-area: pic1;
   margin-left: auto;
@@ -219,30 +230,36 @@ nav {
   display: block;
 
 }
+/* subtext for pictures in about us */
 .script1{
   grid-area: script1;
   text-align: center;
   font-size: 20px;
+  background-color: #b6b4b4;
 }
 .script2{
   grid-area: script2;
   text-align: center;
   font-size: 20px;
+  background-color: #b6b4b4;
 }
 .script3{
   grid-area: script3;
   text-align: center;
   font-size: 20px;
+  background-color: #b6b4b4;
 }
 .script4{
   grid-area: script4;
   text-align: center;
-  font-size: 20px
+  font-size: 20px;
+  background-color: #b6b4b4;
 }
 .script5{
   grid-area: script5;
   text-align: center;
   font-size: 20px;
+  background-color: #b6b4b4;
 }
 /* End of About page style sheet */
 
@@ -275,83 +292,115 @@ nav {
   font-weight: bold;
   text-decoration: underline;
   margin-top: 2%;
+  background-color: #b6b4b4;
 }
+
+
+
+/* Titles for the menu sections */
+/* Entrees */
 .lbar-subtitle{
   grid-area: stitle1;
   text-align: center;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
+  background-color: #b6b4b4;
 }
+/* Appetizers */
 .mbar-subtitle{
   grid-area: stitle2;
   text-align: center;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
+  background-color: #b6b4b4;
 }
+/* Sides */
 .rbar-subtitle{
   grid-area: stitle3;
   text-align: center;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
+  background-color: #b6b4b4;
 }
+/* Drinks */
 .bbar-subtitle{
   grid-area: stitle4;
   text-align: center;
-  border: 3px solid black;
   font-size: 12pt;
   font-weight: bold;
   text-decoration: underline;
+  background-color: #b6b4b4;
 }
+/* End of menu titles */
+
+
+/* Food lists */
+/* Entrees list */
 .menu-lbar{
   grid-area: lbar;
   text-align: center;
-  border: 3px solid black;
+  background-color: #b6b4b4;
+  font-family: 'Phudu', cursive;
+  
 }
+/* Appetizers list */
 .menu-mbar{
   grid-area: mbar;
   text-align: center;
-  border: 3px solid black;
+  background-color: #b6b4b4;
+  font-family: 'Phudu', cursive;
 }
+/* Sides list */
 .menu-rbar{
   grid-area: rbar;
   text-align: center;
-  border: 3px solid black;
+  background-color: #b6b4b4;
+  font-family: 'Phudu', cursive;
 }
+/* end of food lists */
+
+
+
+/* Pics for types of food */
 .menu-lbox{
   grid-area: lbox;
   text-align: center;
-  border: 3px solid black;
 }
 .menu-mbox{
   grid-area: mbox;
   text-align: center;
-  border: 3px solid black;
 }
 .menu-rbox{
   grid-area: rbox;
   text-align: center;
-  border: 3px solid black;
+  
 }
+/* end of pics */
 
+
+/* Start of drinks list */
 .menu-bbar1{
   grid-area: bbar1;
   text-align: center;
-  border: 3px solid black;
+  background-color: #b6b4b4;
+  font-family: 'Phudu', cursive;
 }
 .menu-bbar2{
   grid-area: bbar2;
   text-align: center;
-  border: 3px solid black;
+  background-color: #b6b4b4;
+  font-family: 'Phudu', cursive;
 }
 .menu-bbar3{
   grid-area: bbar3;
   text-align: center;
-  border: 3px solid black;
+  background-color: #b6b4b4;
+  font-family: 'Phudu', cursive;
 }
-
+/* End of drink list */
 
 
 
@@ -374,15 +423,21 @@ nav {
     font-size: 20pt;
     font-weight: bold;
     text-decoration: underline;
+    background-color: #b6b4b4;
+    margin-top: 2%;
   }
+  /* main section of contact where we will implement the contact request form */
   .contact-main{
     grid-area: main;
-    border: 3px solid black;
+    margin-left: 1%;
   }
+
+  /* hours   */
   .contact-rbar{
     grid-area: rbar;
-    border: 3px solid black;
+    
   }
+/* End of contact container */
 
 
 
@@ -405,18 +460,22 @@ nav {
     text-align: center;
     font-size: 20pt;
     font-weight: bold;
+    margin-top: 2%;
     text-decoration: underline;
+    background-color: #b6b4b4;
   }
+  /* Map */
   .map-main{
     grid-area: main;
   }
+  /* Adress */
   .map-bbar{
     grid-area: bbar;
     text-align: center;
     font-size: 20pt;
     font-weight: bold;
   }
-
+/* End of map container */
 
 
 
