@@ -66,13 +66,13 @@ nav {
     grid-area: header;
     text-align: center;
     padding-bottom: 10px;
-    font-size: 30px;
+    font-size: 50px;
   }
 
 .main-container{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 5px 5px;
+  grid-gap: 5px;
   grid-template-areas: 
   "header   header   header"
   "nav      nav      nav"
@@ -112,17 +112,20 @@ nav {
   /* hours */
   .home-lbar{
     grid-area: lbar;
+
     
   }
 /* specials */
   .home-rbar{
     grid-area: rbar;
+
     
   }
   /* Pizza Photo */
   .home-lbox{
     grid-area: lbox;
     padding-left: 10%;
+    
     padding-top: 16%;
   }
 /* Fries Photo */
@@ -133,10 +136,12 @@ nav {
   .home-hours{
     text-align: center;
     font-size: 12pt;
+    padding-right: 10%;
   }
   .home-specials{
     text-align: center;
     font-size: 12pt;
+    padding-right: 10%;
   }
   .spec-title{
     font-size: 20pt;
@@ -407,6 +412,7 @@ nav {
   
 
   /*Start of the map container*/
+  /* When we removed the grid, because you said to do for this section because it doesn't need a grid, the formatting on the section completely messed up so we just kept the grid  */
   .map-container{
       display: grid;
       grid-template-columns: 1fr;
@@ -417,18 +423,19 @@ nav {
       "bbar"
   } 
   .map-title{
-    grid-area: main;
+    grid-area: title;
+    margin-top: 2%;
   }
   /* Map */
   .map-main{
     grid-area: main;
-    text-align: center;
+    /* text-align: center;
     font-size: 20pt;
-    font-weight: bold;
+    font-weight: bold; */
   }
   /* Adress */
   .map-bbar{
-    grid-area: main;
+    grid-area: bbar;
     text-align: center;
     font-size: 20pt;
     font-weight: bold;
@@ -438,7 +445,61 @@ nav {
 
 
 
+/* Start of the takeout container */
+.takeout-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px 5px;
+  grid-template-areas: 
+  "title   title   title   title"
+  "stitle1 stitle2 stitle3 stitle4"
+  "ititle ititle ctitle ctitle"  
+  "lbar    lbar    rbar    rbar"
+}
+.ititle{
+  grid-area: ititle;
+}
+.ctitle{
+  grid-area: ctitle;
+}
+/* Takeout Title */
+.takeout-title{
+grid-area: title;
+text-align: center;
+margin-top: 2%;
+}
+/* gives the formatting for the main grid section */
+.takeout-main{
+  grid-area: main;
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+}
+/* Bar that will contain the dragable data */
+.takeout-lbar{
+  grid-area: lbar;
+  background-color: #717171;
+}
+/* The bar that will hold the order */
+.takeout-rbar{
+  grid-area: rbar;
+  background-color: #717171;
+}
 
+/* The buttions that will pull the data for takeout */
+.subtitle1{
+  grid-area: stitle1;
+}
+.subtitle2{
+  grid-area: stitle2;
+}
+.subtitle3{
+  grid-area: stitle3;
+}
+.subtitle4{
+  grid-area: stitle4;
+}
 
-
-
+.press{
+  background-color: red;
+}
