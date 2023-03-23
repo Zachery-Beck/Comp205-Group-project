@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="Main CSS page.css">
+    <script src="menu.js"></script>
     <meta charset="UTF-8">
     <title>"Pizza Menu"</title>
 </head>
@@ -87,32 +88,34 @@
             <main class="takeout-main">
                 <section class='takeout-container'>
                         <div class="subtitle1 press">   
-                        <button onclick="GetItems( 'Entree.html','takeout-lbar' );">Entrees</button>
+                        <button class="tab" onclick="GetItems( 'Entree.html', 'items');">Entrees</button>
                         </div>
                         <!--Appetizers Title-->
                         <div class="subtitle2 press">   
-                            <button onclick="GetItems( 'Appetizers.html' ,'takeout-lbar');">Appetizers</button>
+                            <button class="tab" onclick="GetItems( 'Appetizers.html', 'items');">Appetizers</button>
                         </div>
                         <!--Sides Title-->
                         <div class="subtitle3 press">   
-                            <button onclick="GetItems( 'Sides.html','takeout-lbar' );">Sides</button>
+                            <button class="tab" onclick="GetItems( 'Sides.html', 'items' );">Sides</button>
                         </div>
                         <!--Drinks Title-->
                         <div class="subtitle4 press">   
-                            <button onclick="GetItems( 'Drinks.html','takeout-lbar' );">Drinks</button>
+                            <button class="tab" onclick="GetItems( 'Drinks.html', 'items' );">Drinks</button>
                         </div>
-                        <aside class="takeout-lbar">
-                            test lbar
+                        <aside id= "items" class="takeout-lbar">
+
                         </aside>
                         <aside class="takeout-rbar">
-                            test rbar
+                            <div id="rightlist" class="listbox" ondragover="AllowDrop( event );" ondrop="Drop( event, 'rightlist' );">    
+  
+                            </div>
                         </aside>
-                        <title class="ititle">
+                        <header class="ititle">
                             <p>Items</p>
-                        </title>
-                        <title class="ctitle">
+                        </header>
+                        <header class="ctitle">
                             <p>Cart</p>
-                        </title>
+                        </header>
                 </section>
             </main>
         </section>
