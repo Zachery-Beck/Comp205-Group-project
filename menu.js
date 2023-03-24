@@ -92,5 +92,115 @@ function Drop( CurrentEvent, DestinationID )
     // prevent the default handling which is to
     //      not allow dropping
     CurrentEvent.preventDefault();
+
+
+
+    if ( null == DestinationItem )
+    {
+        // add a new grade
+        DestinationItem = document.createElement( "DIV" );
+
+        // set the element attributes
+        DestinationItem.setAttribute( "id", Item );
+        DestinationItem.setAttribute( "class", "item" );        
+        DestinationItem.setAttribute( "price", PointValue );
+        DestinationItem.setAttribute( "data-count", 1 );
+        DestinationItem.addEventListener( "dblclick", function () { RemoveItem( Item ); } );
+        // add the text for the grade in the calculator
+        DestinationItem.innerHTML = Item + "<br />(1)";
+
+        // add the element to the destination div
+        document.querySelector( "div[id=\"rightlist\"]" ).appendChild( DestinationItem );
+    }
+else
+    {
+        // update existing grade 
+        var Count = Number( DestinationItem.getAttribute( "data-count" )) + 1;
+        DestinationItem.setAttribute( "data-count", Count );
+        DestinationItem.innerHTML = Item + "<br />(" + Count + ")";    
+    }
+    ComputeTotal()
+
 }
+function AddItem( Item )
+{
+    // get the item element and point value
+    var SourceItem = document.querySelector( "div[id=\"leftlist\"] div[id=\"" + Item + "\"]" )
+    var PointValue = SourceItem.getAttribute( "price" );
         
+
+    // get the existing grade in the calculator
+    var DestinationItem = document.querySelector( "div[id=\"rightlist\"] div[id=\"" + Item + "\"]" );
+
+    // check for no grade found
+    if ( null == DestinationItem )
+        {
+            // add a new grade
+            DestinationItem = document.createElement( "DIV" );
+
+            // set the element attributes
+            DestinationItem.setAttribute( "id", Item );
+            DestinationItem.setAttribute( "class", "item" );        
+            DestinationItem.setAttribute( "price", PointValue );
+            DestinationItem.setAttribute( "data-count", 1 );
+            DestinationItem.addEventListener( "dblclick", function () { RemoveItem( Item ); } );
+            // add the text for the grade in the calculator
+            DestinationItem.innerHTML = Item + "<br />(1)";
+
+            // add the element to the destination div
+            document.querySelector( "div[id=\"rightlist\"]" ).appendChild( DestinationItem );
+        }
+    else
+        {
+            // update existing grade 
+            var Count = Number( DestinationItem.getAttribute( "data-count" )) + 1;
+            DestinationItem.setAttribute( "data-count", Count );
+            DestinationItem.innerHTML = Item + "<br />(" + Count + ")";    
+        }
+        ComputeTotal()
+}
+
+function ComputeTotal(){
+    // get the list of grades
+var ItemList = document.querySelectorAll( "div[id=\"rightlist\"] div" );
+
+var totalp = 0;
+for( var i=0; i<ItemList.length; i++ ){
+    var count = Number(ItemList[i].getAttribute("data-count"));
+    var value = Number(ItemList[i].getAttribute("Price"));
+    var total = count*value;
+    totalp += total
+}
+  
+
+    var GT = document.querySelector("div[id='rightlist']+p");
+    GT.innerHTML = 'Your Total Price is:'+totalp;
+}
+
+
+        
+function RemoveItem( Item ) {
+    // prompt the user
+    var Result = window.confirm( "Remove the Item?" );
+    // process based on the result
+    if ( Result == true )
+    {
+    // get the existing grade in the calculator
+    var DestinationItem = document.querySelector( "div[id=\"rightlist\"] div[id=\"" + Item + "\"]" );
+    // drop the count down by one
+    var Count = Number( DestinationItem.getAttribute( "data-count" )) - 1;
+    // see if it is the last
+    if ( 0 == Count )
+    {
+    // remove the node
+    DestinationItem.parentNode.removeChild( DestinationItem );
+    }
+    else
+    {
+    // update the count
+    DestinationItem.setAttribute( "data-count", Count );
+    DestinationItem.innerHTML = Item + "<br />(" + Count + ")";
+    }
+    }
+    ComputeTotal();
+    }
