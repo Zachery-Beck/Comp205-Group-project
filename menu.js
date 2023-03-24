@@ -98,11 +98,11 @@ function Drop( CurrentEvent, DestinationID )
     if ( null == DestinationItem )
     {
         // add a new grade
-        DestinationItem = document.createElement( "DIV" );
+        // DestinationItem = document.createElement( "DIV" );
 
         // set the element attributes
-        DestinationItem.setAttribute( "id", Item );
-        DestinationItem.setAttribute( "class", "item" );        
+        // DestinationItem.setAttribute( "id", Item );
+        // DestinationItem.setAttribute( "class", "item" );        
         DestinationItem.setAttribute( "price", PointValue );
         DestinationItem.setAttribute( "data-count", 1 );
         DestinationItem.addEventListener( "dblclick", function () { RemoveItem( Item ); } );
