@@ -425,6 +425,7 @@ nav {
 .takeout-rbar{
   grid-area: rbar;
   background-color: #717171;
+  
 }
 
 /* The buttions that will pull the data for takeout */
@@ -444,4 +445,9 @@ nav {
 .press{
   background-color: red;
   padding-bottom: 5%;
+}
+.listbox {
+  min-height: 700px;
+  padding-top: 1%;
+  list-style-type: none;
 }
