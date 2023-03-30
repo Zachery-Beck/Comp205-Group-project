@@ -19,11 +19,11 @@
       </header>
 
       <nav>
-        <a href="index.html">Home</a>
-        <a class="active" href="About Page.html">About</a>
-        <a href="Menu Page.html">Menu</a>
-        <a href="Contact Page.html">Contact</a>
-        <a href="Map Page.html">Map</a>
+        <a href="index.php">Home</a>
+        <a class="active" href="About Page.php">About</a>
+        <a href="Menu Page.php">Menu</a>
+        <a href="Contact Page.php">Contact</a>
+        <a href="Map Page.php">Map</a>
         <a href="Takeout.html">Takeout</a>
     </nav>
         <!--About Title-->

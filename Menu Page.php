@@ -1,7 +1,7 @@
 <?php include "pizzahouse.inc";
     
     
-  HTMLStart( "Contact Page" );
+  HTMLStart( "Menu Page" );
 
 
 ?>
@@ -25,7 +25,7 @@
         <a class="active" href="Menu Page.php">Menu</a>
         <a href="Contact Page.php">Contact</a>
         <a href="Map Page.php">Map</a>
-        <a href="Takeout.php">Takeout</a>
+        <a href="Takeout.html">Takeout</a>
         </nav>
           <!--Hours-->
           <aside class = "lbar">

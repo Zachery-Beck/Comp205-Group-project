@@ -1,10 +1,10 @@
-<?php 
-    include "pizzahouse.inc"; 
+<?php include "pizzahouse.inc";
+    
+    
+  HTMLStart( "Contact Page" );
 
-    HTMLStart("Home Page");
 
 ?>
-
 
 <body>
     <!-- opens main container -->
@@ -17,13 +17,13 @@
               </header>
         <!--Top Navigation Bar Main Code-->
         <nav>
-            <a href="index.html">Home</a>
-            <a href="About Page.html">About</a>
-            <a href="Menu Page.html">Menu</a>
-            <a class="active" href="Contact Page.html">Contact</a>
-            <a href="Map Page.html">Map</a>
-            <a href="Takeout.html">Takeout</a>
-        </nav>
+        <a href="index.php">Home</a>
+        <a href="About Page.php">About</a>
+        <a href="Menu Page.php">Menu</a>
+        <a class="active" href="Contact Page.php">Contact</a>
+        <a href="Map Page.php">Map</a>
+        <a href="Takeout.html">Takeout</a>
+    </nav>
         <!-- Title for Page -->
         <header class="title">
             Contact Us

@@ -1,7 +1,7 @@
 <?php include "pizzahouse.inc";
     
     
-  HTMLStart( "Contact Page" );
+  HTMLStart( "Map Page" );
 
 
 ?>
@@ -19,14 +19,14 @@
                                     Where to find us!
                                     </header>
             <!--Top Navigation Bar Main Code-->
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="About Page.html">About</a>
-                    <a href="Menu Page.html">Menu</a>
-                    <a href="Contact Page.html">Contact</a>
-                    <a class="active" href="Map Page.html">Map</a>
-                    <a href="Takeout.html">Takeout</a>
-                </nav>
+                                    <nav>
+                                    <a href="index.php">Home</a>
+                                    <a href="About Page.php">About</a>
+                                    <a href="Menu Page.php">Menu</a>
+                                    <a href="Contact Page.php">Contact</a>
+                                    <a class="active" href="Map Page.php">Map</a>
+                                    <a href="Takeout.html">Takeout</a>
+                                    </nav>
                                                 <!--Hours-->
                                                 <aside class = "lbar">
                                                     <ul class="hours">

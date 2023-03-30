@@ -1,12 +1,10 @@
-<?php include "pizzahouse.inc"; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="Main CSS page.css">
-    <script src="menu.js"></script>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
+<?php include "pizzahouse.inc";
+    
+    
+  HTMLStart( "Home Page" );
+
+
+?>
 
 
 <!--Start of Home Container Main Code-->
@@ -23,14 +21,14 @@
                                   <header class ='title'>
                                     Welcome to Pizza House
                                     </header>
-            <nav>
-              <a class="active" href="index.html">Home</a>
-              <a href="About Page.html">About</a>
-              <a href="Menu Page.html">Menu</a>
-              <a href="Contact Page.html">Contact</a>
-              <a href="Map Page.html">Map</a>
-              <a href="Takeout.html">Takeout</a>
-            </nav>
+                                    <nav>
+                                    <a class="active" href="index.php">Home</a>
+                                    <a href="About Page.php">About</a>
+                                    <a href="Menu Page.php">Menu</a>
+                                    <a href="Contact Page.php">Contact</a>
+                                    <a href="Map Page.php">Map</a>
+                                    <a href="Takeout.html">Takeout</a>
+                                    </nav>
             <!--Hours-->
             <aside class = "lbar"> 
                           <ul class="hours">

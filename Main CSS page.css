@@ -391,63 +391,62 @@ nav {
 
 
 
-
-/* Start of the takeout container */
-.takeout-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px 5px;
-  grid-template-areas: 
-  "stitle1 stitle2 stitle3 stitle4"
-  "ititle ititle ctitle ctitle"  
-  "lbar    lbar    rbar    rbar"
-}
-.ititle{
-  grid-area: ititle;
-}
-.ctitle{
-  grid-area: ctitle;
-}
-/* Takeout Title */
-/* gives the formatting for the main grid section */
-.takeout-main{
-  grid-area: main;
-  text-align: center;
-  font-size: 20pt;
-  font-weight: bold;
-}
-/* Bar that will contain the dragable data */
-.takeout-lbar{
-  grid-area: lbar;
-  background-color: #717171;
-}
-/* The bar that will hold the order */
-.takeout-rbar{
-  grid-area: rbar;
-  background-color: #717171;
-  
+/* takeout layout */
+div.takeout-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "takeout-appetizers    takeout-cart"
+        "takeout-sides         takeout-cart"
+        "takeout-entrees       takeout-cart"
+        "takeout-drinks         takeout-cart"
+        ;
+    gap: 5px;    
 }
 
-/* The buttions that will pull the data for takeout */
-.subtitle1{
-  grid-area: stitle1;
-}
-.subtitle2{
-  grid-area: stitle2;
-}
-.subtitle3{
-  grid-area: stitle3;
-}
-.subtitle4{
-  grid-area: stitle4;
-}
+section.takeout-appetizers      { grid-area: takeout-appetizers; }
+section.takeout-sides           { grid-area: takeout-sides}
+section.takeout-entrees         { grid-area: takeout-entrees; }
+section.takeout-drinks          { grid-area: takeout-drinks; }
+section.takeout-cart            { grid-area: takeout-cart; }
 
-.press{
-  background-color: red;
-  padding-bottom: 5%;
+
+/* menu formatting */
+section.menu, .cart
+{
+    padding-bottom: 20px;
 }
-.listbox {
-  min-height: 700px;
-  padding-top: 1%;
-  list-style-type: none;
+.menu-appetizers, .menu-entrees, .menu-drinks,
+.takeout-appetizers, .takeout-entrees, .takeout-drinks, .takeout-cart, .menu-sides, .takeout-sides
+{
+    text-align: center;
+    background-color: #b6b4b4;
+    margin: 5px 5px 5px 5px;
+}
+.menu-table, .takeout-table
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu-item
+{
+    min-width: 250px;
+}
+.menu-quantity, .menu-price
+{
+    min-width: 80px;
+}
+.takeout-table
+{
+    margin-top: 20px;
+}
+.takeout-table th
+{
+    background-color: red;
+    border-radius: 5px;
+}
+.cart
+{
+    min-height: 100px;
 }
