@@ -406,9 +406,17 @@ div.takeout-container
 }
 
 section.takeout-appetizers      { grid-area: takeout-appetizers; }
+
+
 section.takeout-sides           { grid-area: takeout-sides}
+
+
 section.takeout-entrees         { grid-area: takeout-entrees; }
+
+
 section.takeout-drinks          { grid-area: takeout-drinks; }
+
+
 section.takeout-cart            { grid-area: takeout-cart; }
 
 
