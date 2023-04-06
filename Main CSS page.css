@@ -436,6 +436,7 @@ section.menu, .cart
 {
     margin-left: auto;
     margin-right: auto;
+    min-width: auto;
 }
 .menu-item
 {
