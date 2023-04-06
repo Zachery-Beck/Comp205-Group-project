@@ -1,4 +1,4 @@
-<?php include "pizzahouse.inc";
+<?php require "pizzahouse.inc";
    
   HTMLStart( "Home Page" );
 

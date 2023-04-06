@@ -1,4 +1,4 @@
-<?php include "pizzahouse.inc";
+<?php require "pizzahouse.inc";
      
     HTMLStart( "Takeout Page" );
 
@@ -26,22 +26,22 @@
     <!-- use a grid to layout the main content -->
     <div class="takeout-container">
         <section class="takeout-appetizers menu">
-            <h3 class="aligncenter" onclick="LoadMenu( 'Appetizers.html', 'menu-apps');">Appetizers</h3>
+            <h3 class="aligncenter" onclick="LoadMenu( 'Appetizers.php', 'menu-apps');">Appetizers</h3>
             <div id="menu-apps"></div>
         </section>
     
         <section class="takeout-entrees menu">           
-            <h3 class="aligncenter" onclick="LoadMenu( 'Entree.html', 'menu-entrees');">Entrees</h3>
+            <h3 class="aligncenter" onclick="LoadMenu( 'Entree.php', 'menu-entrees');">Entrees</h3>
             <div id="menu-entrees"></div>
         </section>
             
         <section class="takeout-drinks menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'Drinks.html', 'menu-drinks');">Drinks</h3>
+            <h3 class="aligncenter" onclick="LoadMenu( 'Drinks.php', 'menu-drinks');">Drinks</h3>
             <div id="menu-drinks"></div>
         </section>     
                      
         <section class="takeout-sides menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'Drinks.html', 'menu-sides');">Sides</h3>
+            <h3 class="aligncenter" onclick="LoadMenu( 'Drinks.php', 'menu-sides');">Sides</h3>
             <div id="menu-sides"></div>
         </section> 
           
