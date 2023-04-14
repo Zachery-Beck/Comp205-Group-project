@@ -41,7 +41,7 @@
         </section>     
                      
         <section class="takeout-sides menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'Drinks.php', 'menu-sides');">Sides</h3>
+            <h3 class="aligncenter" onclick="LoadMenu( 'Sides.php', 'menu-sides');">Sides</h3>
             <div id="menu-sides"></div>
         </section> 
           

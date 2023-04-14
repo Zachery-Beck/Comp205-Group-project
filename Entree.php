@@ -19,7 +19,7 @@
         <div class="item" id="item9" price="5.99" count="0" draggable="true" ondragstart="StartDrag( event );">3 Piece Chicken Tenders (3 piece- $5.99)</div>
 </div> -->
       
-<table class="menu-table">
+<!-- <table class="menu-table">
         <tr id="Ent-Pizza" draggable="true" ondragstart="StartDrag( event );" data-price="12.99">
             <td class="menu-item">Make your Own Pizza</td>
             <td class="menu-price alignright">$12.99</div>
@@ -56,4 +56,4 @@
             <td class="menu-item">3 Piece Chicken Tenders</td>
         <td class="menu-price alignright">$6.99</td>                        
         </tr>
-    </table>
+    </table> -->

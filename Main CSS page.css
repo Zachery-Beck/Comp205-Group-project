@@ -423,6 +423,7 @@ section.takeout-cart            { grid-area: takeout-cart; }
 /* menu formatting */
 section.menu, .cart
 {
+    min-width: auto;
     padding-bottom: 20px;
 }
 .menu-appetizers, .menu-entrees, .menu-drinks,
@@ -431,12 +432,12 @@ section.menu, .cart
     text-align: center;
     background-color: #b6b4b4;
     margin: 5px 5px 5px 5px;
+    min-width: 100px;
 }
 .menu-table, .takeout-table
 {
     margin-left: auto;
     margin-right: auto;
-    min-width: auto;
 }
 .menu-item
 {
@@ -458,4 +459,10 @@ section.menu, .cart
 .cart
 {
     min-height: 100px;
+}
+.table{
+  margin-left: 50%;
+}
+
+tr{ margin-left: 4%;
 }

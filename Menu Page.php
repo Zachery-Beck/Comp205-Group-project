@@ -23,52 +23,258 @@
     <section class='menu-container'>
         <!--Entrees-->
         <aside class="menu-lbar">   
-            <ul>
-                <li>Make your Own Pizza (Starting at $12.99)</li>
-                <br>
-                <li>Five Cheese Pizza ($13.99)</li>
-                <br>
-                <li>Meat Lovers Pizza ($16.99)</li>
-                <br>
-                <li>Spicy Italian Sausage Pizza ($14.99)</li>
-                <br>
-                <li>Supreme Pizza ($15.99)</li>
-                <br>
-                <li>Bone in Wings (Dozen- $12.99 or Half Dozen- $6.99) </li>
-                <br>
-                <li>Chicken Tenders (5 piece- $10.99 or 3 piece- $5.99)</li>
-            </ul>
+<?php
+            // lab P6 code
+
+            // set the connection information
+            //      151.161.91.21 is the ip address of the database server
+            //      set the UserName and Password to your credentials
+            //      set the database to your username 
+            $Server = "151.161.91.21";
+            $UserName = "tal6010";
+            $Password = "temp!7734";
+            $Database = "tal6010";
+
+            // connect to the database
+            //      create a new instance of a mysqli object. this
+            //      object contains the connection to the mysql server
+            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
+
+            // check for a successful connection
+            //      connect_error will evaluate to true if there is an error
+            if ( $Connection->connect_error )
+            {
+                // stop the script and echo an error message
+                echo "<h2>Database Error</h2>\n";
+                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+            }
+
+            // make a select statement to get data from the database
+            // make a select statement to get data from the database
+            $SQL = "select title, price from menu_items where category = \"entree\";";
+                
+            // execute the query
+            //      use the query method of the $Connection object
+            $Results = $Connection->query( $SQL );
+
+            // check for results
+            //      $Results will evaluate to true if there data is returned
+            //      from the database, false if no data is returned
+            if ( $Results )
+            {
+            
+
+                // start the table HTML
+                echo "<table>\n";
+
+
+                // loop through the results
+                //      the fecth_row method returns an array of the column
+                //      data - one item in the array for each column in the
+                //      select statement.
+                //
+                //      the statement in the while will evaluate to false when
+                //      there are no more rows
+                while( $Row = $Results->fetch_row() )
+                {
+                    // add  table row
+                    echo "   <tr>\n";
+
+                    // loop through the items in the array
+                    //      the count function returns the number of items
+                    //      in the array.
+                    for( $i=0; $i<count($Row); $i++ )
+                    {
+                        // add table cells
+                        echo "     <td>".$Row[$i]."</td>\n";
+                    }
+
+                    // end of the table row
+                    echo "   </tr>\n";
+                }
+                
+                // stop the table HTML
+                echo "</table>\n";
+            }
+            else
+            {
+                // no results returned
+                echo "<p>No results returned from the query</p>\n";
+            }
+
+            // close the connection
+            $Connection->close();
+?>
         </aside>
         <!--Appetizers-->
         <aside class="menu-mbar">   
-            <ul>
-                <li>Mozzarella Sticks $4.49</li>
-                <br>
-                <li>Spinach & Artichoke Dip $6.99</li>
-                <br>
-                <li>Brew Pub Pretzels & Beer Cheese Dip $6.99</li>
-                <br>
-                <li>Fried Pickles $4.99</li>
-                <br>
-                <li>Chicken Caesar Salad $5 .49</li>
-                <br>
-                <li>Tater Skins $3.49</li>
-                <br>
-                <li>Grilled Chicken Salad $6 .49</li>
-            </ul>
+        <?php
+            // lab P6 code
+
+            // set the connection information
+            //      151.161.91.21 is the ip address of the database server
+            //      set the UserName and Password to your credentials
+            //      set the database to your username 
+            $Server = "151.161.91.21";
+            $UserName = "tal6010";
+            $Password = "temp!7734";
+            $Database = "tal6010";
+
+            // connect to the database
+            //      create a new instance of a mysqli object. this
+            //      object contains the connection to the mysql server
+            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
+
+            // check for a successful connection
+            //      connect_error will evaluate to true if there is an error
+            if ( $Connection->connect_error )
+            {
+                // stop the script and echo an error message
+                echo "<h2>Database Error</h2>\n";
+                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+            }
+
+            // make a select statement to get data from the database
+            // make a select statement to get data from the database
+            $SQL = "select title, price from menu_items where category = \"appetizer\";";
+                
+            // execute the query
+            //      use the query method of the $Connection object
+            $Results = $Connection->query( $SQL );
+
+            // check for results
+            //      $Results will evaluate to true if there data is returned
+            //      from the database, false if no data is returned
+            if ( $Results )
+            {
+            
+
+                // start the table HTML
+                echo "<table>\n";
+
+
+                // loop through the results
+                //      the fecth_row method returns an array of the column
+                //      data - one item in the array for each column in the
+                //      select statement.
+                //
+                //      the statement in the while will evaluate to false when
+                //      there are no more rows
+                while( $Row = $Results->fetch_row() )
+                {
+                    // add  table row
+                    echo "   <tr>\n";
+
+                    // loop through the items in the array
+                    //      the count function returns the number of items
+                    //      in the array.
+                    for( $i=0; $i<count($Row); $i++ )
+                    {
+                        // add table cells
+                        echo "     <td>".$Row[$i]."</td>\n";
+                    }
+
+                    // end of the table row
+                    echo "   </tr>\n";
+                }
+                
+                // stop the table HTML
+                echo "</table>\n";
+            }
+            else
+            {
+                // no results returned
+                echo "<p>No results returned from the query</p>\n";
+            }
+
+            // close the connection
+            $Connection->close();
+?>
         </aside>
         <!--Sides-->
         <aside class="menu-rbar">   
-            <ul>
-                <li>Fries ($3.49)</li>
-                <br>
-                <li>Cheese Fries ($4.49)</li>
-                <li>Onion Rings	($3.49)</li>
-                <br>
-                <li>Breadsticks ($5.99)</li>
-                <br>
-                <li>Cheese Sticks ($5.29)</li>
-            </ul>
+        <?php
+            // lab P6 code
+
+            // set the connection information
+            //      151.161.91.21 is the ip address of the database server
+            //      set the UserName and Password to your credentials
+            //      set the database to your username 
+            $Server = "151.161.91.21";
+            $UserName = "tal6010";
+            $Password = "temp!7734";
+            $Database = "tal6010";
+
+            // connect to the database
+            //      create a new instance of a mysqli object. this
+            //      object contains the connection to the mysql server
+            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
+
+            // check for a successful connection
+            //      connect_error will evaluate to true if there is an error
+            if ( $Connection->connect_error )
+            {
+                // stop the script and echo an error message
+                echo "<h2>Database Error</h2>\n";
+                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+            }
+
+            // make a select statement to get data from the database
+            // make a select statement to get data from the database
+            $SQL = "select title, price from menu_items where category = \"sides\";";
+                
+            // execute the query
+            //      use the query method of the $Connection object
+            $Results = $Connection->query( $SQL );
+
+            // check for results
+            //      $Results will evaluate to true if there data is returned
+            //      from the database, false if no data is returned
+            if ( $Results )
+            {
+            
+
+                // start the table HTML
+                echo "<table>\n";
+
+
+                // loop through the results
+                //      the fecth_row method returns an array of the column
+                //      data - one item in the array for each column in the
+                //      select statement.
+                //
+                //      the statement in the while will evaluate to false when
+                //      there are no more rows
+                while( $Row = $Results->fetch_row() )
+                {
+                    // add  table row
+                    echo "   <tr>\n";
+
+                    // loop through the items in the array
+                    //      the count function returns the number of items
+                    //      in the array.
+                    for( $i=0; $i<count($Row); $i++ )
+                    {
+                        // add table cells
+                        echo "     <td>".$Row[$i]."</td>\n";
+                    }
+
+                    // end of the table row
+                    echo "   </tr>\n";
+                }
+                
+                // stop the table HTML
+                echo "</table>\n";
+            }
+            else
+            {
+                // no results returned
+                echo "<p>No results returned from the query</p>\n";
+            }
+
+            // close the connection
+            $Connection->close();
+?>
          </aside>
         <!--Pizza Photo-->
         <figure class="menu-lbox">   
@@ -84,45 +290,258 @@
         </figure>
         <!--Drinks Left-->
         <aside class="menu-bbar1">   
-            <ul>
-                <li>Pepsi ($2.50)</li>
-                <br>
-                <li>Diet Pepsi ($2.50)</li>
-                <br>
-                <li>Pepsi Wild Cherry ($2.50)</li> 
-                <br>   
-                <li>Diet Wild Cherry Pepsi ($2.50)</li>
-                <br>
-                <li>Ice Tea ($2.50)</li>
-            </ul>
+        <?php
+            // lab P6 code
+
+            // set the connection information
+            //      151.161.91.21 is the ip address of the database server
+            //      set the UserName and Password to your credentials
+            //      set the database to your username 
+            $Server = "151.161.91.21";
+            $UserName = "tal6010";
+            $Password = "temp!7734";
+            $Database = "tal6010";
+
+            // connect to the database
+            //      create a new instance of a mysqli object. this
+            //      object contains the connection to the mysql server
+            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
+
+            // check for a successful connection
+            //      connect_error will evaluate to true if there is an error
+            if ( $Connection->connect_error )
+            {
+                // stop the script and echo an error message
+                echo "<h2>Database Error</h2>\n";
+                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+            }
+
+            // make a select statement to get data from the database
+            // make a select statement to get data from the database
+            $SQL = "select title, price from menu_items where category = \"drink1\";";
+                
+            // execute the query
+            //      use the query method of the $Connection object
+            $Results = $Connection->query( $SQL );
+
+            // check for results
+            //      $Results will evaluate to true if there data is returned
+            //      from the database, false if no data is returned
+            if ( $Results )
+            {
+            
+
+                // start the table HTML
+                echo "<table>\n";
+
+
+                // loop through the results
+                //      the fecth_row method returns an array of the column
+                //      data - one item in the array for each column in the
+                //      select statement.
+                //
+                //      the statement in the while will evaluate to false when
+                //      there are no more rows
+                while( $Row = $Results->fetch_row() )
+                {
+                    // add  table row
+                    echo "   <tr>\n";
+
+                    // loop through the items in the array
+                    //      the count function returns the number of items
+                    //      in the array.
+                    for( $i=0; $i<count($Row); $i++ )
+                    {
+                        // add table cells
+                        echo "     <td>".$Row[$i]."</td>\n";
+                    }
+
+                    // end of the table row
+                    echo "   </tr>\n";
+                }
+                
+                // stop the table HTML
+                echo "</table>\n";
+            }
+            else
+            {
+                // no results returned
+                echo "<p>No results returned from the query</p>\n";
+            }
+
+            // close the connection
+            $Connection->close();
+?>
         </aside>
         <!--Drinks Middle-->
         <aside class="menu-bbar2">
-            <ul>
-                <li>Sierra Mist ($2.50)</li>
-                <br>
-                <li>Diet Sierra Mist ($2.50)</li>
-                <br>
-                <li>Dr. Pepper ($2.50)</li>
-                <br>
-                <li>Diet Dr. Pepper ($2.50)</li>
-                <br>
-                <li>Water ($1.00)</li>
-            </ul>
+        <?php
+            // lab P6 code
+
+            // set the connection information
+            //      151.161.91.21 is the ip address of the database server
+            //      set the UserName and Password to your credentials
+            //      set the database to your username 
+            $Server = "151.161.91.21";
+            $UserName = "tal6010";
+            $Password = "temp!7734";
+            $Database = "tal6010";
+
+            // connect to the database
+            //      create a new instance of a mysqli object. this
+            //      object contains the connection to the mysql server
+            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
+
+            // check for a successful connection
+            //      connect_error will evaluate to true if there is an error
+            if ( $Connection->connect_error )
+            {
+                // stop the script and echo an error message
+                echo "<h2>Database Error</h2>\n";
+                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+            }
+
+            // make a select statement to get data from the database
+            // make a select statement to get data from the database
+            $SQL = "select title, price from menu_items where category = \"drink2\";";
+                
+            // execute the query
+            //      use the query method of the $Connection object
+            $Results = $Connection->query( $SQL );
+
+            // check for results
+            //      $Results will evaluate to true if there data is returned
+            //      from the database, false if no data is returned
+            if ( $Results )
+            {
+            
+
+                // start the table HTML
+                echo "<table>\n";
+
+
+                // loop through the results
+                //      the fecth_row method returns an array of the column
+                //      data - one item in the array for each column in the
+                //      select statement.
+                //
+                //      the statement in the while will evaluate to false when
+                //      there are no more rows
+                while( $Row = $Results->fetch_row() )
+                {
+                    // add  table row
+                    echo "   <tr>\n";
+
+                    // loop through the items in the array
+                    //      the count function returns the number of items
+                    //      in the array.
+                    for( $i=0; $i<count($Row); $i++ )
+                    {
+                        // add table cells
+                        echo "     <td>".$Row[$i]."</td>\n";
+                    }
+
+                    // end of the table row
+                    echo "   </tr>\n";
+                }
+                
+                // stop the table HTML
+                echo "</table>\n";
+            }
+            else
+            {
+                // no results returned
+                echo "<p>No results returned from the query</p>\n";
+            }
+
+            // close the connection
+            $Connection->close();
+?>
         </aside>
         <!--Drinks Right-->
         <aside class="menu-bbar3">
-            <ul>
-                <li>Mountain Dew ($2.50)</li>
-                <br>
-                <li>Diet Mountain Dew ($2.50)</li>
-                <br>
-                <li>Mug Root Beer ($2.50)</li>
-                <br>
-                <li>Crush Orange ($2.50)</li>
-                <br>
-                <li>Baja Blast ($2.50)</li>
-            </ul>
+        <?php
+            // lab P6 code
+
+            // set the connection information
+            //      151.161.91.21 is the ip address of the database server
+            //      set the UserName and Password to your credentials
+            //      set the database to your username 
+            $Server = "151.161.91.21";
+            $UserName = "tal6010";
+            $Password = "temp!7734";
+            $Database = "tal6010";
+
+            // connect to the database
+            //      create a new instance of a mysqli object. this
+            //      object contains the connection to the mysql server
+            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
+
+            // check for a successful connection
+            //      connect_error will evaluate to true if there is an error
+            if ( $Connection->connect_error )
+            {
+                // stop the script and echo an error message
+                echo "<h2>Database Error</h2>\n";
+                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
+            }
+
+            // make a select statement to get data from the database
+            // make a select statement to get data from the database
+            $SQL = "select title, price from menu_items where category = \"drink3\";";
+                
+            // execute the query
+            //      use the query method of the $Connection object
+            $Results = $Connection->query( $SQL );
+
+            // check for results
+            //      $Results will evaluate to true if there data is returned
+            //      from the database, false if no data is returned
+            if ( $Results )
+            {
+            
+
+                // start the table HTML
+                echo "<table>\n";
+
+
+                // loop through the results
+                //      the fecth_row method returns an array of the column
+                //      data - one item in the array for each column in the
+                //      select statement.
+                //
+                //      the statement in the while will evaluate to false when
+                //      there are no more rows
+                while( $Row = $Results->fetch_row() )
+                {
+                    // add  table row
+                    echo "   <tr>\n";
+
+                    // loop through the items in the array
+                    //      the count function returns the number of items
+                    //      in the array.
+                    for( $i=0; $i<count($Row); $i++ )
+                    {
+                        // add table cells
+                        echo "     <td>".$Row[$i]."</td>\n";
+                    }
+
+                    // end of the table row
+                    echo "   </tr>\n";
+                }
+                
+                // stop the table HTML
+                echo "</table>\n";
+            }
+            else
+            {
+                // no results returned
+                echo "<p>No results returned from the query</p>\n";
+            }
+
+            // close the connection
+            $Connection->close();
+?>
         </aside>
         <!--Entrees Title-->
         <div class="lbar-subtitle">   
