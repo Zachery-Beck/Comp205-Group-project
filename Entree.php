@@ -54,6 +54,6 @@
         </tr>
             <tr id="Ent-ThreeTender" draggable="true" ondragstart="StartDrag( event );" data-price="6.99">
             <td class="menu-item">3 Piece Chicken Tenders</td>
-        <td class="menu-price alignright">$6.99</td>                        
+            <td class="menu-price alignright">$6.99</td>                        
         </tr>
     </table> -->

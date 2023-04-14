@@ -287,7 +287,7 @@ nav {
   text-align: center;
   background-color: #b6b4b4;
   font-family: 'Phudu', cursive;
-  
+  padding-left: 20%;
 }
 /* Appetizers list */
 .menu-mbar{
@@ -295,6 +295,7 @@ nav {
   text-align: center;
   background-color: #b6b4b4;
   font-family: 'Phudu', cursive;
+  padding-left: 7%;
 }
 /* Sides list */
 .menu-rbar{
@@ -302,6 +303,7 @@ nav {
   text-align: center;
   background-color: #b6b4b4;
   font-family: 'Phudu', cursive;
+  padding-left: 31%;
 }
 /* end of food lists */
 
@@ -331,18 +333,21 @@ nav {
   text-align: center;
   background-color: #b6b4b4;
   font-family: 'Phudu', cursive;
+  padding-left: 21%;
 }
 .menu-bbar2{
   grid-area: bbar2;
   text-align: center;
   background-color: #b6b4b4;
   font-family: 'Phudu', cursive;
+  padding-left: 30%;
 }
 .menu-bbar3{
   grid-area: bbar3;
   text-align: center;
   background-color: #b6b4b4;
   font-family: 'Phudu', cursive;
+  padding-left: 25%;
 }
 /* End of drink list */
   /* main section of contact where we will implement the contact request form */
@@ -460,9 +465,10 @@ section.menu, .cart
 {
     min-height: 100px;
 }
-.table{
-  margin-left: 50%;
+.menutable{
+  
+text-align: center;
+
 }
 
-tr{ margin-left: 4%;
-}
+
