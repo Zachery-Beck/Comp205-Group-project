@@ -48,7 +48,7 @@
                 {
                     // add  table row
                     // echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price= \"$price\";";
-                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price='".$_POST['price']."';";
+                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price='".$Row['price']."';";
                     
 
                     // loop through the items in the array
