@@ -34,7 +34,7 @@
             
 
                 // start the table HTML
-                echo "<table>\n";
+                echo "<table class = phptables>\n";
 
 
                 // loop through the results
