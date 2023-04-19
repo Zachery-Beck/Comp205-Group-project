@@ -20,7 +20,7 @@
             }
 
             // make a select statement to get data from the database
-            $SQL = "select title, price from menu_items where category = '".$_POST['category']."';";
+            $SQL = "select title, price from menu_items where category='".$_POST['category']."';";
             // $SQL = "select title, price from menu_items where category = \"$category\";";
             // execute the query
             //      use the query method of the $Connection object
@@ -47,7 +47,8 @@
                 while( $Row = $Results->fetch_row() )
                 {
                     // add  table row
-                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price= '".$_POST['price']."';";
+                    // echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price= \"$price\";";
+                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price='".$_POST['price']."';";
                     //echo "   <tr>\n";
                     
 
