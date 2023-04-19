@@ -20,7 +20,7 @@
             }
 
             // make a select statement to get data from the database
-            $SQL = "select title, price from menu_items where category='".$_POST['category']."';";
+            $SQL = "select title, price, id from menu_items where category='".$_POST['category']."';";
             // $SQL = "select title, price from menu_items where category = \"$category\";";
             // execute the query
             //      use the query method of the $Connection object
@@ -48,18 +48,13 @@
                 {
                     // add  table row
                     // echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price= \"$price\";";
-                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price='".$Row['price']."';";
+                    echo "<tr draggable='true' id = 'menu".$Row[2]."' ondragstart='StartDrag(event)' data-price='".$Row[1]."'>";
                     
 
-                    // loop through the items in the array
-                    //      the count function returns the number of items
-                    //      in the array.
-                    for( $i=0; $i<count($Row); $i++ )
-                    {
                         // add table cells
-                        echo "<td>".$Row[$i]."</td>\n";
-                        
-                    }
+                        echo "<td>".$Row[0]."</td>\n";
+                        echo "<td>$".$Row[1]."</td>\n";
+                    
 
                     // end of the table row
                     echo "   </tr>\n";

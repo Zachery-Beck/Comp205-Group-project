@@ -428,7 +428,7 @@ section.takeout-cart            { grid-area: takeout-cart; }
 /* menu formatting */
 section.menu, .cart
 {
-    min-width: 200px;
+    min-width: 180px;
     padding-bottom: 20px;
 }
 .menu-appetizers, .menu-entrees, .menu-drinks,
