@@ -26,23 +26,23 @@
     <!-- use a grid to layout the main content -->
     <div class="takeout-container">
         <section class="takeout-appetizers menu">
-            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'appetizer');">Appetizers</h3>
-            <div id="appetizer"></div>
+            <h3 class="aligncenter" onclick="LoadMenu( 'appetizer-results', 'appetizer');">Appetizers</h3>
+            <div id="appetizer-results"></div>
         </section>
     
         <section class="takeout-entrees menu">           
-            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'entree');">Entrees</h3>
-            <div id="entree"></div>
+            <h3 class="aligncenter" onclick="LoadMenu( 'entree-results', 'entree');">Entrees</h3>
+            <div id="entree-results"></div>
         </section>
             
         <section class="takeout-drinks menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'drink1');">Drinks</h3>
-            <div id="drink1"></div>
+            <h3 class="aligncenter" onclick="LoadMenu( 'drink-results', 'drink1');">Drinks</h3>
+            <div id="drink-results"></div>
         </section>     
                      
         <section class="takeout-sides menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'sides');">Sides</h3>
-            <div id="sides"></div>
+            <h3 class="aligncenter" onclick="LoadMenu( 'sides-results', 'sides');">Sides</h3>
+            <div id="sides-results"></div>
         </section> 
           
         <!-- this section has the cart -->

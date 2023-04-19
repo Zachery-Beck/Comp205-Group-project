@@ -1,5 +1,5 @@
 // function to load menu from html files
-function LoadMenu( MenuFileName, OutputID )
+function LoadMenu( ResultsID, category )
 {
     // first clear any menus
     ClearMenus();
@@ -33,7 +33,7 @@ function LoadMenu( MenuFileName, OutputID )
             ( xmlhttp.status == 200 ))
         {
             // add the received html to the info section
-            document.getElementById( OutputID ).innerHTML = xmlhttp.responseText;
+            document.getElementById( ResultsID ).innerHTML = xmlhttp.responseText;
         }
     }
 
@@ -49,10 +49,10 @@ function LoadMenu( MenuFileName, OutputID )
 
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 
-    var OutputID = "category = "
-
+    var Argument = "category=" + category;
+    
     // send the request to the server
-    xmlhttp.send( OutputID );
+    xmlhttp.send( Argument );
 }
 
 
