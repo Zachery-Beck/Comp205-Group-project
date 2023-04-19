@@ -27,22 +27,22 @@
     <div class="takeout-container">
         <section class="takeout-appetizers menu">
             <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'appetizer');">Appetizers</h3>
-            <div id="menu-apps"></div>
+            <div id="appetizer"></div>
         </section>
     
         <section class="takeout-entrees menu">           
             <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'entree');">Entrees</h3>
-            <div id="menu-entrees"></div>
+            <div id="entree"></div>
         </section>
             
         <section class="takeout-drinks menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'menu-drink1');">Drinks</h3>
-            <div id="menu-drinks"></div>
+            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'drink1');">Drinks</h3>
+            <div id="drink1"></div>
         </section>     
                      
         <section class="takeout-sides menu">                    
-            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'menu-sides');">Sides</h3>
-            <div id="menu-sides"></div>
+            <h3 class="aligncenter" onclick="LoadMenu( 'TakeoutFunction.php', 'sides');">Sides</h3>
+            <div id="sides"></div>
         </section> 
           
         <!-- this section has the cart -->

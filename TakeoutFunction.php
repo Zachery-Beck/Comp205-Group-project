@@ -1,7 +1,5 @@
 <?php
     // function for the start of an html page
-    function GrabTakeout( $category )
-    {
         $Server = "151.161.91.21";
             $UserName = "tal6010";
             $Password = "temp!7734";
@@ -23,7 +21,7 @@
 
             // make a select statement to get data from the database
             // make a select statement to get data from the database
-            $SQL = "select title, price from menu_items where category = \"$category\";";
+            $SQL = "select title, price from menu_items where category = '".$_POST['category']."';";
                 
             // execute the query
             //      use the query method of the $Connection object
@@ -50,8 +48,7 @@
                 while( $Row = $Results->fetch_row() )
                 {
                     // add  table row
-                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price="\"$price\"">";
-
+                    echo "<tr draggable='true' ondragstart='StartDrag(event)' data-price= '".$_POST['price']."';";
 
                     // loop through the items in the array
                     //      the count function returns the number of items
@@ -59,7 +56,7 @@
                     for( $i=0; $i<count($Row); $i++ )
                     {
                         // add table cells
-                        echo "     <td>".$Row[$i]."</td>\n";
+                        echo "< td>".$Row[$i]."</td>\n";
                         
                     }
 
@@ -78,5 +75,4 @@
 
             // close the connection
             $Connection->close();
-    }
 ?>

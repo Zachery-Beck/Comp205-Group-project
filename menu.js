@@ -45,10 +45,14 @@ function LoadMenu( MenuFileName, OutputID )
     //      the complete https:// on the file name if you are
     //      getting something from the same server. if you are
     //      not, you WILL need the fully qualified path.
-    xmlhttp.open( "GET", MenuFileName, true );
+    xmlhttp.open( "POST", "TakeoutFunction.php", true );
+
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+    var OutputID = "category = "
 
     // send the request to the server
-    xmlhttp.send();
+    xmlhttp.send( OutputID );
 }
 
 
