@@ -40,7 +40,8 @@
         <a href="Contact Page.php">Contact</a>
         <a href="Map Page.php">Map</a>
         <a href="Takeout.php">Takeout</a>
-        <a href="Login.php">Account</a>
+        <a href="Register.php">Register</a>
+        <a href="Login.php">Login</a>
     </nav>
 <?php
     }
@@ -122,26 +123,27 @@
 ?>
 
 <?php
-    function Footer()
-    {
+function Footer() {
 ?>
-    <footer class = footer-main>
-    // check for a user
-    if ( isset( $_SESSION["Email"] ))
-    {
-        // echo the current user
-        echo "   <p>Current User: ".$_SESSION["Email"]."</p>\n";
-        echo "   <p><a href=\"Logout.php\">Log Out</a> when finished</p>\n";
-    }
-    else
-    {
-        // echo no login yet
-        echo "   <p>No user logged in</p>\n";
-        echo "   <p>Please <a href=\"Logon.php\">Log in</a></p>\n";
-    }    
-     echo </footer>
+    <footer class="footer-main">
+        <?php
+        // check for a user
+        if (isset($_SESSION["Email"])) {
+            ?>
+            <p>Current User: <?php echo $_SESSION["Email"]; ?></p>
+            <p><a href="Logout.php">Log Out</a> when finished</p>
+            <?php
+        } else {
+            ?>
+            <p>No user logged in</p>
+            <p>Please <a href="Login.php">Log in</a></p>
+            <p>Please <a href="Register.php">Register</a></p>
+            <?php
+        }
+        ?>
+    </footer>
 <?php
-    }
+}
 ?>
 
 <?php
