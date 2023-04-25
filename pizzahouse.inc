@@ -40,6 +40,7 @@
         <a href="Contact Page.php">Contact</a>
         <a href="Map Page.php">Map</a>
         <a href="Takeout.php">Takeout</a>
+        <a href="Login.php">Account</a>
     </nav>
 <?php
     }
@@ -124,13 +125,21 @@
     function Footer()
     {
 ?>
-     <footer class = footer-main>
-        <ul>
-            <li>Company Name - Pizza House LLC</li>
-            <li>Email - PizzaHouseLLC@gmail.com</li>
-            <li>Phone# - 570-420-1337</li>
-        </ul>
-    </footer>
+    <footer class = footer-main>
+    // check for a user
+    if ( isset( $_SESSION["Email"] ))
+    {
+        // echo the current user
+        echo "   <p>Current User: ".$_SESSION["Email"]."</p>\n";
+        echo "   <p><a href=\"Logout.php\">Log Out</a> when finished</p>\n";
+    }
+    else
+    {
+        // echo no login yet
+        echo "   <p>No user logged in</p>\n";
+        echo "   <p>Please <a href=\"Logon.php\">Log in</a></p>\n";
+    }    
+     echo </footer>
 <?php
     }
 ?>
