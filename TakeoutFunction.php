@@ -1,23 +1,6 @@
 <?php
-    // function for the start of an html page
-        $Server = "151.161.91.21";
-            $UserName = "tal6010";
-            $Password = "temp!7734";
-            $Database = "tal6010";
-
-            // connect to the database
-            //      create a new instance of a mysqli object. this
-            //      object contains the connection to the mysql server
-            $Connection = new mysqli( $Server, $UserName, $Password, $Database );
-
-            // check for a successful connection
-            //      connect_error will evaluate to true if there is an error
-            if ( $Connection->connect_error )
-            {
-                // stop the script and echo an error message
-                echo "<h2>Database Error</h2>\n";
-                die( "MySQLi Connection Error: ".$Connection->connect_error."\n" );
-            }
+            require "pizzahouse.inc";
+            $Connection = DatabaseConnect();
 
             // make a select statement to get data from the database
             $SQL = "select title, price, id from menu_items where category='".$_POST['category']."';";
