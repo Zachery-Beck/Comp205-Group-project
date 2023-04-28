@@ -483,3 +483,7 @@ min-width: 200px;
 .loginform{
   margin-left: 50%;
 }
+
+.registerbody{
+  text-align: center;
+}

@@ -31,15 +31,13 @@
     
 ?>   
 
-<main class=loginform>
+<section class = loginform>
     <form action="Login.php" method="POST">
-        <label for="Email">Email</label><br>
-            <input type="Email" id="Email" name="Email"><br>
-        <label for="Password">Password</label><br>
-            <input type="Password" id="Password" name="Password"><br><br>
-            <input type="Submit" value="Submit">
+        <p>Email: <input name="Email" type="text" required="true" /></p>
+        <p>Password: <input name="Password" type="password" required="true" /></p>
+        <p><button type="submit">Login</button></p>
     </form>
-</main>
+</section>
 <?php 
 
   PageEnd();

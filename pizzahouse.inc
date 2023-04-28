@@ -245,19 +245,13 @@ function Footer() {
 ?>
 
 
-
+<?php
 // insert data
 function InsertUser()
 {
     // check to see if something was send via POST
     if ( isset( $_POST["Email"] ))
     {
-        // post data has been sent
-        echo "<p>Something to insert</p>\n";
-
-        // write out the data sent
-        echo "<p>POST data sent:</p>\n";
-
         // loop through the post data
         //      foreach will loop through associative arrays.
         //      the $Key => $Value expression is how you
@@ -275,7 +269,7 @@ function InsertUser()
         $Connection = DatabaseConnect();   
         
         // build the insert sql
-        $SQL = "insert into pa_congress( Email, Password, Name, Address, City, State, Zip ) value (";
+        $SQL = "insert into users( Email, Password, Name, Address, City, State, Zip ) value (";
         $SQL .= "\"".$_POST['Email']."\"";
         $SQL .= ",\"".$_POST['Password']."\"";
         $SQL .= ",\"".$_POST['Name']."\"";
@@ -290,10 +284,12 @@ function InsertUser()
         
         // close the connection
         $Connection->close();         
-
+        
     }
-    else
-    {
-
-    }    
+        else
+        {
+            // error message
+            echo "<p>Error with insert</p>\n";
+        }  
 }
+?>
