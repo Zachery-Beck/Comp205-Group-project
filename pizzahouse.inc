@@ -252,17 +252,7 @@ function InsertUser()
     // check to see if something was send via POST
     if ( isset( $_POST["Email"] ))
     {
-        // loop through the post data
-        //      foreach will loop through associative arrays.
-        //      the $Key => $Value expression is how you
-        //      get the key and value pairs from an associative
-        //      array. for example, if $_POST["first-name"] = "Bill"
-        //      $Key will be set to "first-name" and $Value will be
-        //      set to "Bill".
-        foreach( $_POST as $Key => $Value )
-        {
-            // echo out the result
-            echo "<p>".$Key.": ".$Value."</p>\n";
+        <meta http-equiv="Refresh" content="0; url='Login.php'" />
         }
 
         // connect to the database
