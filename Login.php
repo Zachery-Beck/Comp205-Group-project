@@ -10,7 +10,6 @@ if (isset($_POST["Email"])) {
         // save the user name and password to the session
         $_SESSION["Email"] = $_POST["Email"];
         $_SESSION["Password"] = $_POST["Password"];
-        exit;
     }
 else{
     echo"<p class=invalid>You're not getting any pizza today because your email or password is INVALID</p>";
