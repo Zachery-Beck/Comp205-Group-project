@@ -17,6 +17,15 @@ else{
 }
 } 
 
+        // check for POST variables
+        if ( isset( $_POST["Email"] ))
+        {
+            // save the user name and password to the session
+            $_SESSION["Email"] = $_POST["Email"];
+            $_SESSION["Password"] = $_POST["Password"];
+            
+        }        
+
     HTMLStart( "Login Page" );
 
     PageStart();

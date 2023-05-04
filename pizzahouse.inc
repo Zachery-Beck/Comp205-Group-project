@@ -271,6 +271,9 @@ function InsertUser()
     // check to see if something was sent via POST
     if ( isset( $_POST["Email"] ))
     {
+        <meta http-equiv="Refresh" content="0; url='Login.php'" />
+        }
+
         // connect to the database
         $Connection = DatabaseConnect();   
         
