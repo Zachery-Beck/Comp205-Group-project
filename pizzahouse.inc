@@ -181,33 +181,52 @@ function Footer() {
 <?php
     function GrabFood( $category )
     {
-
+// connect to the database
             $Connection = DatabaseConnect();
-
+// make a select statement to get data from the database
             $SQL = "select title, price from menu_items where category = \"$category\";";
-                
+// execute the query
+// use the query method of the $Connection object 
             $Results = $Connection->query( $SQL );
-
+// check for results
+// $Results will evaluate to true if there data is returned
+// from the database, false if no data is returned
             if ( $Results )
             {
+                // results returned
+                // start the table HTML
                 echo "<table class=\"menutable\">\n";
-
+// loop through the results
+// the fecth_row method returns an array of the column
+// data - one item in the array for each column in the
+// select statement.
+//
+// the statement in the while will evaluate to false when
+// there are no more rows
                 while( $Row = $Results->fetch_row() )
                 {
+                    // add table row
                     echo "   <tr>\n";
-
+                    // loop through the items in the array
+                    // the count function returns the number of items
+                    // in the array.
                     for( $i=0; $i<count($Row); $i++ )
                     {
+                        // add table cells
                         echo "     <td>".$Row[$i]."</td>\n";
                     }
+                    // end of the table row
                     echo "   </tr>\n";
                 }
+                // stop the table HTML
                 echo "</table>\n";
             }
             else
             {
+                // no results returned
                 echo "<p>No results returned from the query</p>\n";
             }
+            // close the connection
             $Connection->close();
     }
 ?>
@@ -249,22 +268,9 @@ function Footer() {
 // insert data
 function InsertUser()
 {
-    // check to see if something was send via POST
+    // check to see if something was sent via POST
     if ( isset( $_POST["Email"] ))
     {
-        // loop through the post data
-        //      foreach will loop through associative arrays.
-        //      the $Key => $Value expression is how you
-        //      get the key and value pairs from an associative
-        //      array. for example, if $_POST["first-name"] = "Bill"
-        //      $Key will be set to "first-name" and $Value will be
-        //      set to "Bill".
-        foreach( $_POST as $Key => $Value )
-        {
-            // echo out the result
-            echo "<p>".$Key.": ".$Value."</p>\n";
-        }
-
         // connect to the database
         $Connection = DatabaseConnect();   
         
@@ -285,11 +291,17 @@ function InsertUser()
         // close the connection
         $Connection->close();         
         
+        // check if the insert was successful
+        if ($Results === true) {
+            return true;
+        } else {
+            return false;
+        }
     }
-        else
-        {
-            // error message
-            echo "<p>Error with insert</p>\n";
-        }  
+    else {
+        // error message
+        echo "<p>Error with insert</p>\n";
+        return false;
+    }  
 }
 ?>

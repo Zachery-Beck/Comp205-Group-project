@@ -481,9 +481,16 @@ min-width: 200px;
 }
 
 .loginform{
-  margin-left: 50%;
+  margin-left: 35%;
 }
 
 .registerbody{
   text-align: center;
+}
+
+.invalid{
+  font-size: 150%;
+  text-align: center;
+  background-color: red;
+  font-weight: 400;
 }

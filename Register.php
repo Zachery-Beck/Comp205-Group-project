@@ -19,21 +19,6 @@
     PictureUnderBars();
 
     Footer();
-
-    // check for POST variables
-    if ( isset( $_POST["UserName"] ))
-    {
-        // save the user name and password to the session
-        $_SESSION["Email"] = $_POST["Email"];
-        $_SESSION["Password"] = $_POST["Password"];
-        $_SESSION["Name"] = $_POST["Name"];
-        $_SESSION["Address"] = $_POST["Address"];
-        $_SESSION["City"] = $_POST["City"];
-        $_SESSION["State"] = $_POST["State"];
-        $_SESSION["Zip"] = $_POST["Zip"];
-        exit();
-    }    
-    
 ?>   
 
 <main class=loginform>
